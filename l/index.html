@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>div + css宽度自适应（液态布局）</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <style type="text/css">
+        /*左边栏，设定宽度*/
+      html,body{
+         width: 100%;
+         height: 100%;
+         margin: 0;
+      }
+      #wrap{
+            width: 100%;
+            height: 100%;
+        }
+        .wrap_l
+        {
+            height: 150px;
+            width: 150px;
+            background: yellow;
+        }
+        /*中间栏，宽度auto,*/
+        .wrap_m
+        {
+          position: absolute;
+          top:150px;
+          width: 100%;
+          background: blue;
+          bottom: 0px;
+        }
+        </style>
+</head>
+<body>
+    <div id="wrap">
+         <div class="wrap_l">
+            这是上边部分<br />
+            这是上边部分<br />
+            这是上边部分
+        </div>
+        <div class="wrap_m">
+            这是下部分
+        </div>
+</div>
+</body>
+</html> 

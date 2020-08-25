@@ -1,0 +1,114 @@
+<template>
+<div class="wrapper">
+   <ul class="content">
+     <button>按钮</button>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+     <li>分类</li>
+    </ul>
+</div>
+</template>
+<script>
+import BScroll from 'better-scroll'
+export default {
+    name:'category',
+    data(){
+        return{
+            scroll:null
+        }
+    },
+    created(){
+        // this.scroll=new BScroll('.content',{
+    },
+    mounted(){
+        this.scroll=new BScroll(document.querySelector('.wrapper'),{
+                 protoType:3,
+                 pullUpload:true
+        })
+        this.scroll.on('scroll',(position)=>{
+                console.log(position);
+        })
+        this.scroll.on('pullingUp',()=>{
+            console.log('上拉加载更多');       
+        })
+}
+}
+</script>
+<style scoped>
+.wrapper{
+    height:150px;
+    background-color:red;
+    overflow: hidden;
+    overflow-y:scroll;
+
+}
+</style>
